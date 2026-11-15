@@ -66,6 +66,8 @@ Los textos `DTI`, `LTV` y `Valor` de algunas tablas son representaciones formate
 
 **Importante:** la tabla enumera marcadores aceptados por la nueva verificación; no afirma que todos aparezcan en el archivo actual. El reporte de la ejecución indica cuáles se encontraron realmente.
 
+**Resultado comprobado en CI:** en la [corrida del 15 de noviembre de 2026](https://github.com/a01664722-ai/autocredit_advisor-2/actions/runs/43777067259), las 80,000 filas superaron la verificación de las 12 columnas y no aparecieron marcadores de ausencia. En una [corrida negativa independiente](https://github.com/a01664722-ai/autocredit_advisor-2/actions/runs/43777208621), el pipeline sí rechazó un valor de texto en `SAVINGS_BALANCE`.
+
 ## 4. Cómo se comprueba
 
 - `python -m scripts.verificar_contrato data/Base_SAS_Equipo3.csv` revisa encabezados, que las 12 columnas sean numéricas, enteros donde corresponde, banderas 0/1, ausencias críticas y al menos 30 registros.

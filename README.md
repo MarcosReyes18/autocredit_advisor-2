@@ -28,8 +28,9 @@ streamlit run app.py
 
 El validador revisa las 12 columnas numéricas, encabezados, variables binarias 0/1, ausencias en variables críticas y tamaño mínimo. Si encuentra un problema, termina con código de salida 1. El pipeline ejecuta la misma comprobación y las pruebas en `push` y `pull_request`.
 
-- [Ejecuciones de GitHub Actions](https://github.com/a01664722-ai/autocredit_advisor-2/actions/workflows/pruebas.yml)
-- **Prueba intencional fallida:** enlace directo pendiente de incorporar tras la corrida en una rama de prueba. La base de `main` no se modifica.
+- [Corrida exitosa en `main`](https://github.com/a01664722-ai/autocredit_advisor-2/actions/runs/43777067259): **80,000 filas y 12 columnas numéricas validadas**, sin marcadores de ausencia; la suite de pruebas terminó correctamente.
+- [Corrida fallida intencional](https://github.com/a01664722-ai/autocredit_advisor-2/actions/runs/43777208621): el mismo validador rechazó la fila 2 de un CSV de prueba porque `SAVINGS_BALANCE` contenía `NO_ES_UN_NUMERO`. GitHub Actions detuvo el job con código 1. La prueba se hizo en `prueba/b2-contrato-dato-invalido`, sin tocar la base real ni la rama `main`.
+- [Todas las ejecuciones del workflow](https://github.com/a01664722-ai/autocredit_advisor-2/actions/workflows/pruebas.yml).
 - **Protección de `main`:** para bloquear también una fusión, el administrador debe configurar el check como obligatorio en las reglas de protección de la rama.
 
 ## Acceso y origen de cifras

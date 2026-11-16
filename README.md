@@ -41,7 +41,7 @@ GitHub Actions repite la validación del CSV y las pruebas en cada cambio a `mai
 
 Repositorio: https://github.com/a01664722-ai/autocredit_advisor-2
 
-**URL pública de Streamlit:** el enlace del despliegue no está registrado. Para comprobar el acceso se requiere abrirlo en una ventana privada; `localhost` solo sirve para ejecución local.
+**URL pública de Streamlit:** [Abrir AutoCredit Advisor](https://autocreditadvisor-2-f2ww6wn7nnrysa43edznfp.streamlit.app/). Se recomienda comprobar el acceso en una ventana privada.
 
 La app ofrece cuentas de demostración para analistas (Adrián y Sofía), gerencia (Mariana) y soporte/operación (Luis), con permisos según el rol.
 
